@@ -1,9 +1,5 @@
 #!/bin/bash
-if [ "$#" -ne 1 ]; then
-	echo "Error: You must provide a file name as an argument."
-	exit 1
-fi 
-file_name ="$1"
+file_name=$(ls -1tr|head -n1)
 
 chmod u+x $file_name
 git add .
